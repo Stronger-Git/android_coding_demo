@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--设置用户协议不可编辑
+        刚开始用的EditText并不能很好的控制键盘的输入，改用
+        ScrollView+TextView可以实现效果-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <TextView
+            android:id="@+id/et_app_licence"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:textSize="19sp"
+            android:text="@string/protocol_content" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/cbConfirmLicence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/app_protocol" />
+
+    <Button
+        android:id="@+id/btConfirmLicence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_bt_ok" />
+</LinearLayout>
