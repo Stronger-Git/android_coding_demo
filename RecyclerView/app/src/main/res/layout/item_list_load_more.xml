@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:visibility="gone">
+                <ProgressBar
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="正在玩命加载"
+                    android:textSize="35sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="110dp"/>
+            </RelativeLayout>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/reload"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="加载失败,请稍后"
+                android:gravity="center"
+                android:textSize="35sp"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

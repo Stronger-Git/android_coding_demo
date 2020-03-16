@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--app:showAsAction | android:showAction 不同的ActionBar设置不同-->
+    <item
+        android:id="@+id/list_view"
+        android:title="ListView"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:title="垂直标准"
+                android:id="@+id/list_view_vertical"/>
+            <item
+                android:title="垂直反向"
+                android:id="@+id/list_view_vertical_reverse"/>
+            <item
+                android:title="水平标准"
+                android:id="@+id/list_view_horizontal"/>
+            <item
+                android:title="水平反向"
+                android:id="@+id/list_view_horizontal_reverse"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/grid_view"
+        android:title="GridView"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never" >
+        <menu>
+            <item
+                android:title="垂直标准"
+                android:id="@+id/grid_view_vertical"/>
+            <item
+                android:title="垂直反向"
+                android:id="@+id/grid_view_vertical_reverse"/>
+            <item
+                android:title="水平标准"
+                android:id="@+id/grid_view_horizontal"/>
+            <item
+                android:title="水平反向"
+                android:id="@+id/grid_view_horizontal_reverse"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/waterfall"
+        android:title="瀑布流效果"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never" >
+        <menu>
+            <item
+                android:title="垂直标准"
+                android:id="@+id/waterfall_view_vertical"/>
+            <item
+                android:title="垂直反向"
+                android:id="@+id/waterfall_view_vertical_reverse"/>
+            <item
+                android:title="水平标准"
+                android:id="@+id/waterfall_view_horizontal"/>
+            <item
+                android:title="水平反向"
+                android:id="@+id/waterfall_view_horizontal_reverse"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/multi_type_item"
+        android:title="多类型条目" />
+</menu>
