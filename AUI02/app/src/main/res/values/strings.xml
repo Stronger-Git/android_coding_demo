@@ -1,0 +1,14 @@
+<resources>
+<string name="app_name">AUI02</string>
+<string name="app_protocol">同意接受APP用户协议</string>
+<string name="app_bt_ok" >确认</string>
+<string name="protocol_content">
+1. 用户登录成功后，优设将给予每个用户一个可以收藏文章的个人中心，用户应当对帐号所进行的所有活动和事件负法律责任。
+2. 用户须对在优设的信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义发布任何信息；不得恶意使用帐号导致其他用户误认；否则优设有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。\n
+3. 用户不应将其帐号转让或出借予他人使用。如用户发现其帐号遭他人非法使用，应立即通知优设。因黑客行为或用户的保管疏忽导致帐号遭他人非法使用，优设不承担任何责任。\n
+4. 用户必须同意接受优设通过电子邮件或其他方式向用户发送商品促销或其他相关商业信息。\n
+5. 用户理解，优设需要定期或不定期地对提供网络服务的平台或相关的设备进行检修或者维护，如因此类情况而造成网络服务在合理时间内的中断，优设无需为此承担任何责任，但应尽可能事先进行通告。\n
+    6. 用户同意保障和维护优设及其他用户的利益，如因用户违反有关法律、法规或本协议项下的任何条款而给优设或任何其他第三方造成损失，用户同意承担由此造成的损害赔偿责任。
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti dolores eos fugiat, impedit possimus quasi velit veniam veritatis voluptas? Ab asperiores consequatur eveniet nesciunt quis ratione reprehenderit rerum velit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet aut blanditiis dolor eos esse facilis fugit incidunt maiores nam nemo optio praesentium quis rerum similique soluta temporibus ullam voluptates.</string>
+</resources>

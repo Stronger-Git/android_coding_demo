@@ -1,5 +1,5 @@
 
-## android案例源码记录
+## android学习笔记
 - zgmooc案例演示默认放在项目根路径下后缀名为.md的文件
 - RecyclerView 
     + **1.0版本**，用RecyclerView主要实现了ListView和GridView效果，代码核心思想布局管理器LayoutManager和Adapter，布局管理器主要实现类有`LinearLayoutManger`、`GridViewLayoutManger`、`StaggerLayoutManager`;适配器Adapter继承`RecyclerView.Adapter<VH extends ViewHolder>`，一般用内部类extends `RecyclerView.ViewHolder`来创建ViewHolder。  
