@@ -1,4 +1,4 @@
-package cn.wjx34t0302;
+package cn.wjx34t0402;
 
 import org.junit.Test;
 

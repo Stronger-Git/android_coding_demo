@@ -1,4 +1,4 @@
-package cn.wjx34t0302;
+package cn.wjx34t0402;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cn.wjx34t0302", appContext.getPackageName());
+        assertEquals("cn.wjx34t0402", appContext.getPackageName());
     }
 }
