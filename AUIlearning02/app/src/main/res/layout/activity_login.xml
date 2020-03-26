@@ -49,11 +49,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="登录"/>
-    <Button
-        android:id="@+id/bt_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="注册"/>
     <TextView
         android:id="@+id/tv_msg"
         android:layout_width="match_parent"
