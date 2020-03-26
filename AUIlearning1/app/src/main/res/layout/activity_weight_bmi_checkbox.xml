@@ -5,53 +5,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="用户登录"
-        android:textSize="35sp"
-        android:gravity="center"/>
+        android:text="BMI计算器"
+        android:textSize="35sp"/>
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/et_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="用户名"/>
+        android:hint="身高（米）"/>
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/et_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="密码"/>
-    <RadioGroup
+        android:hint="体重（公斤）"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/rb_name_to_login"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="用户名登录" />
-        <RadioButton
-            android:id="@+id/rb_email_to_login"
+        <CheckBox
+            android:id="@+id/cb_who"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="邮箱地址登录"/>
-    </RadioGroup>
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="记住登录状态"/>
-    <Button
-        android:id="@+id/bt_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="登录"/>
+            android:text="WHO标准"/>
+        <CheckBox
+            android:id="@+id/cb_asia"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="亚洲标准"/>
+        <CheckBox
+            android:id="@+id/cb_china"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="中国标准"/>
+    </LinearLayout>
     <TextView
-        android:id="@+id/tv_msg"
+        android:id="@+id/tv_calc_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_calc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_dark"/>
+        android:text="计算"/>
+
 </LinearLayout>
