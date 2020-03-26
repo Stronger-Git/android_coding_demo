@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AUI01</string>
+    <string name="content">手机软件，主要指安装在智能手机上的软件，完善原始系统的不足与个性化。使手机完善其功能，为用户提供更丰富的使用体验的主要手段。手机软件的运行需要有相应的手机系统，截至2017年6月1日，主要的手机系统：苹果公司的iOS、谷歌公司的Android（安卓）系统、塞班平台和微软平台。</string>
+    <string name="email">wcj@163.com</string>
+</resources>
