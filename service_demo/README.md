@@ -106,10 +106,13 @@ android开发中一项任务可能需要多个进程相互协作，相互委托�
 1. 明确需求  
 某app需要进行BitCoin充值，需要调用第三方支付服务，然后第三方支付服务拉起一个新的Activity提供用户账单信息并且具有支付功能。支付完毕后，第三方响应客户端，通过回调方法，给与用户支付操作成功与否信息。
 2. 案例展示  
-项目结构
+项目结构  
+
 ![image](./app/src/main/res/drawable/service1.png)  
+
 演示  
-![image](./app/src/main/res/drawable/service2.gif)
+![image](./app/src/main/res/drawable/service2.gif)  
+
 3. 代码实现（核心代码）
     - 编写支付服务和支付界面（Server端）    
     Client通过bindService(Intent, ServiceConnection, int),实现ServiceConnection接口实现组件之间的通信，`public void onServiceConnected(ComponentName name, IBinder service) `方法中的IBinder对象就是Server通过调用onBind方法返回的一个间接继承Binder类的对象。私有内部类``ThirdPartPayImpl``继承``ThirdPartPayAction.Stub``**.Stub类**实现了[AIDL](#aidl)接口并且继承了Binder类（AIDL通信的本质）。PayAction支付动作类，因为app绑定第三方支付后，当调用requestPay时，service会拉起一个支付的[``PayActivity``](#PayAction),这个Activity也需要与该支付服务做绑定因为支付操作都是在该界面进行的，与服务通信的IBinder对象就是return new PayAction()所给。
