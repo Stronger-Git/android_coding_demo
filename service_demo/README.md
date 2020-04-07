@@ -1,17 +1,17 @@
-[1. 服务的概念](#p1)  
-[2. 为什么使用服务](#p2)  
-[3. 服务的使用](#p3)  
-[4. Android跨进程通信AIDL](#p4)  
-[5. AIDL模拟支付宝支付](#p5)
-### <span id="p1">服务的概念</span>
+[1. 服务的概念](#服务的概念)  
+[2. 为什么使用服务](#为什么使用服务)  
+[3. 服务的使用](#服务的使用)  
+[4. Android跨进程通信AIDL](#Android跨进程通信AIDL)  
+[5. AIDL模拟支付宝支付](#AIDL模拟支付宝支付)
+### <a id="p1">服务的概念</a>
     服务是一个可以长期在后台运行没有用户界面的应用组件。  
     服务可以由其他应用组件启动，比如activity，服务一  
     经启动，即使activity已销毁服务仍可正常运行于后台。
-### <span id="p2">为什么使用服务？</span>
+### <a id="p2">为什么使用服务？</a>
     服务并没有漂亮的界面，但是某些操作需要去做，比如
     耗时操作请求数据等异步工作，我们可以使用服务，放
     置后台，增强用户体验。
-### <span id="p3">服务的使用：</span>
+### <a id="p3">服务的使用：</a>
     服务属于四大组件之一，使用流程同其他组件如BroadcastReceiver很相似，  
     同样需要编写类继承组件相应的类或者实现接口，然后在Manifest声明注册  
     ，通过在Activity中借助Intent进行开启相应的组件。
@@ -78,7 +78,9 @@ public class FirstService extends Service {
 以bind方式开启的service，组件与组件之间可以通过extends Binder生成一个IBinder对象，activity和service组件之间就可以通过ServiceConnection建立连接进行通信，原理相当于C/S架构，Activity相当于客户端，Service相当于服务器。bindService(...)开启的服务，服务进程并不会一直运行于后台，当Activity销毁时要释放服务资源即unbind否则会导致泄露问题，也就是说service的与activity不求同生但求同死。
 ##### 混合使用服务  
 1. 前面我们已经了解到服务有这么多的启动方式，接着我们对它进行组合，可以看到当服务通过start开启然后绑定后可以进行通信，按下返回键服务并不会销毁（图中并没有演示），这样保证了服务跑于后台并且能通信。
-![image](./app/src/main/res/drawable/1.gif)
+![image](
+
+1.gif)
 2. start->bind->unbind查看效果  
 unbindService之后service并没有destroy，所以说以start开启服务之后，只有stop才可以正常的销毁服务。
 ![image](./app/src/main/res/drawable/2.gif)
@@ -100,13 +102,17 @@ android开发中一项任务可能需要多个进程相互协作，相互委托�
     >通常，**暴露接口方法**给其他应用进行调用的应用称为**服务端**，调用其他应用的方法的应用称为客户端，客户端通过绑定服务端的Service来进行交互。  
 
 ### <span id="p5">[AIDL模拟支付宝支付](https://blog.csdn.net/qq_30591155/article/details/105200843)</span>
+##### [详情点击](https://blog.csdn.net/qq_30591155/article/details/105200843)
 1. 明确需求  
 某app需要进行BitCoin充值，需要调用第三方支付服务，然后第三方支付服务拉起一个新的Activity提供用户账单信息并且具有支付功能。支付完毕后，第三方响应客户端，通过回调方法，给与用户支付操作成功与否信息。
 2. 案例展示  
-项目结构
-![image](E:/ScreenCapture/ShareX.13.0.1.nocmd.com/ShareX/Screenshots/2020-03/service1.png)  
+项目结构  
+
+![image](./app/src/main/res/drawable/service1.png)  
+
 演示  
-![image](E:/ScreenCapture/ShareX.13.0.1.nocmd.com/ShareX/Screenshots/2020-03/service2.gif)
+![image](./app/src/main/res/drawable/service2.gif)  
+
 3. 代码实现（核心代码）
     - 编写支付服务和支付界面（Server端）    
     Client通过bindService(Intent, ServiceConnection, int),实现ServiceConnection接口实现组件之间的通信，`public void onServiceConnected(ComponentName name, IBinder service) `方法中的IBinder对象就是Server通过调用onBind方法返回的一个间接继承Binder类的对象。私有内部类``ThirdPartPayImpl``继承``ThirdPartPayAction.Stub``**.Stub类**实现了[AIDL](#aidl)接口并且继承了Binder类（AIDL通信的本质）。PayAction支付动作类，因为app绑定第三方支付后，当调用requestPay时，service会拉起一个支付的[``PayActivity``](#PayAction),这个Activity也需要与该支付服务做绑定因为支付操作都是在该界面进行的，与服务通信的IBinder对象就是return new PayAction()所给。
