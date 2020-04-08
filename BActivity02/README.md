@@ -16,8 +16,9 @@
 **解决方法**
 去除热部署，File->Settings->搜索Instant Run->将Enable Instant Run to hot swap code取消勾选->apply;重启应用，问题解决！
 
-案例截图
-![登录](./app/src/main/res/drawable/sign.png)
+案例截图  
+
+![登录](./app/src/main/res/drawable/sign.png)  
 
 ![注册](./app/src/main/res/drawable/register.png)
 
