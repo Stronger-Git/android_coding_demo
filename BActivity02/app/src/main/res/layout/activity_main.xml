@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@android:color/white"
+        android:textSize="27sp"
+        android:text="Launch WUJIXIANF APP "
+        android:gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="27sp"
+            android:text=""
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_userInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_status"
+            android:textColor="@android:color/white"
+            android:textSize="27sp"
+            android:text=""
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/tv_userInfo"
+            android:textSize="27sp"
+            android:text=""
+            android:gravity="center"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/bt_sign_in_main"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_sign_shape"
+        android:layout_gravity="center_horizontal"
+        android:text="SIGN IN"/>
+    <Button
+        android:id="@+id/bt_register_main"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bt_register_shape"
+        android:layout_gravity="center_horizontal"
+        android:text="REGISTER"/>
+
+
+
+</LinearLayout>
