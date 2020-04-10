@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:civ="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cn.wjx34t0601.util.CircleImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/contact0"
+        civ:border_width="0dp"/>
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/contact_icon"
+        android:text="联系人姓名"
+        android:textSize="25sp"/>
+
+</RelativeLayout>
