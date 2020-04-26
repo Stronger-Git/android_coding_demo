@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="requestGet"
+        android:textAllCaps="false"
+        android:onClick="requestGet"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST提交字符串"
+        android:textAllCaps="false"
+        android:onClick="postString"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST提交表单数据"
+        android:textAllCaps="false"
+        android:onClick="postFormData"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST单文件"
+        android:textAllCaps="false"
+        android:onClick="postFile"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST多文件"
+        android:textAllCaps="false"
+        android:onClick="postFiles"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件下载"
+        android:textAllCaps="false"
+        android:onClick="downloadFiles"/>
+
+</LinearLayout>

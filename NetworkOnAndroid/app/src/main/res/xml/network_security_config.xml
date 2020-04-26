@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--应用范围内定义-->
+    <base-config cleartextTrafficPermitted="true"/>
+    <!--网络范围内定义-->
+    <!--<domain-config>
+        <domain includeSubdomains="true">example.com</domain>
+        <domain-config>
+
+        </domain-config>
+    </domain-config>-->
+</network-security-config>
