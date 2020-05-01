@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--在main_activity中注册fragment标签
+        ==注意：它不是一个控件，它是一个引用型的标签==-->
+    <!--<fragment
+        android:id="@+id/left_frag"
+        android:tag="frag_left"
+        android:name="cn.wjx34t0701.fragment.FragmentTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <fragment
+        android:id="@+id/right_frag"
+        android:tag="frag_right"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:name="cn.wjx34t0701.fragment.FragmentContent" />-->
+
+    <!--中国大学mooc-->
+    <!--动态加载fragment将其放入FrameLayout布局容器-->
+    <TextView
+        android:id="@+id/frag_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="吴吉祥的Fragment"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textAllCaps="false"
+        android:background="#0000ff"/>
+    <!--<FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_below="@id/frag_title"
+        android:layout_above="@id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_content"
+        android:layout_below="@id/frag_title"
+        android:layout_above="@id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <include
+        android:id="@+id/bottombar"
+        layout="@layout/bottom_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
