@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="微信(182)"
+        android:background="@color/toolbar_bg_default"
+        android:fitsSystemWindows="true"
+        android:layout_marginBottom="3dp">
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="主标题"
+            android:textColor="@android:color/background_dark"
+            android:textSize="17sp" />-->
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rg"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="2dp" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/toolbar_bg_default"
+        android:padding="3dp">
+
+        <RadioButton
+            android:id="@+id/tab_webchat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:checked="true"
+            android:text="微信" />
+        <RadioButton
+            android:id="@+id/tab_contacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab2"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="通讯录"/>
+        <RadioButton
+            android:id="@+id/tab_explore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab3"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="发现"/>
+        <RadioButton
+            android:id="@+id/tab_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab4"
+            android:text="我"/>
+    </RadioGroup>
+
+</RelativeLayout>
